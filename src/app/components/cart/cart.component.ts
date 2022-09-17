@@ -13,6 +13,7 @@ export class CartComponent implements OnInit {
   address: string = '';
   username: string = '';
   creditCardNumber: string = '';
+  validCardNumber: boolean = true;  
   constructor(private cart: CartService, private router: Router) { }
 
   ngOnInit(): void {
@@ -36,6 +37,12 @@ export class CartComponent implements OnInit {
   removeItem(item: CartItem): void {
     this.cart.removeItem(item);
     this.items = this.cart.items;
+    alert('Item removed from the cart!');
+  }
+
+  validateCardNumber(cardNumber: string){
+    const regexp = /\d{16}/;
+    this.validCardNumber = regexp.test(cardNumber);
   }
 
 }

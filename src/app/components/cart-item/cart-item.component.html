@@ -1,0 +1,10 @@
+<div class="cart-item">
+    <img src="{{ item.url }}" alt="{{ item.name }}">
+    <div class="cart-item-details">
+        <h4>{{ item.name }}</h4>
+        <p>${{ item.price }}</p>
+        <label for="amount">Amount: </label>
+        <input type="number" id="amount" [(ngModel)]="item.amount">
+        <button class="btn btn-danger" (click)="removeItem.emit(item)" style="margin: 8px;">Remove</button>
+    </div>    
+</div>
