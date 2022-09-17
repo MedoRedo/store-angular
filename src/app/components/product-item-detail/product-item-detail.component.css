@@ -16,6 +16,8 @@ img {
 }
 
 .detail-item {
+  display: flex;
+  flex-direction: column;
   margin-left: 128px;
   margin-right: 128px;
 }

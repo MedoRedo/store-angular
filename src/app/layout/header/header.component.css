@@ -13,5 +13,6 @@
 
 a {
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: solid;
+    font-weight: 700;
 }
